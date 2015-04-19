@@ -1,16 +1,17 @@
 # Reich_CSCI2270_FinalProject
-# This project will do something that is yet to be decided.
-Project Summary:
 
-How to Run:
+#Project Summary:
 
-Dependencies:
 
-System Requirements:
+#How to Run:
 
-Group Members:
+#Dependencies:
 
-Contributors:
+#System Requirements:
 
-Open issues/bugs:
+#Group Members:
+
+#Contributors:
+
+#Open issues/bugs:
 
