@@ -7,15 +7,16 @@ present in different hash tables.  It takes in a .txt file and uses the informat
 
 #How to Run:
 
-This project was built as a Code Blocks console project and can be run from that program on Linux OS or from the command line.  This program takes no adiitional command line arguments. Files needed to build the program are main.cpp, HashTable.h, and HashTable.cpp.  The .txt files are for testing purposes only.
+This project was built as a Code Blocks console project and can be run from that program on Linux OS or from the command line.  This program takes no adiitional command line arguments. Files needed to build the program are main.cpp, HashTable.h, and HashTable.cpp.  The .txt files are for testing purposes only.  Must include the build
+option: [-std=c++0x].  In Code Blocks: Project>Build Options>Flag appropriate option.
 
 #Dependencies:
 
-Reich_CSCI2270_finalProject.cbp, main.cpp, HashTable.h, and HashTable.cpp.  1000word_test.txt and Movie_test.txt files are for testing purposes only.
+Reich_CSCI2270_finalProject.cbp, main.cpp, HashTable.h, and HashTable.cpp.  1000word_test.txt and Movie_test.txt files are for testing purposes only.  
 
 #System Requirements:
 
-Linux OS
+Linux OS. Must include the buildoption: [-std=c++0x].  In Code Blocks: Project>Build Options>Flag appropriate option.
 
 #Group Members:
 
