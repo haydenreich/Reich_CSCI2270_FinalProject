@@ -4,6 +4,7 @@
 
 This project tests different hash functions by allowing the user to compare the different load factors and collisions
 present in different hash tables.  It takes in a .txt file and uses the information contained within to build a hash table.  The user can select from 4 hash functions to test.  The user can also choose their desired table size, as well as the multiplication constant for the multiplication hash function.  The table can also be cleared in order to run multiple tests without exiting the program.  Constant values can be changed as often as desired.
+Don't forget to build the table before trying to print and score!
 
 #How to Run:
 
