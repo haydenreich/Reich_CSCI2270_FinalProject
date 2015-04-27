@@ -3,7 +3,7 @@
 #Project Summary:
 
 This project tests different hash functions by allowing the user to compare the different load factors and collisions
-present in different hash tables.  It takes in a .txt file and uses the information contained within to build a hash table.  The user can select from 3(to start) hash functions to test.  The user can also choose their desired table size, as well as the multiplication constant for the multiplication hash function.  The table can also be cleared in order to run multiple tests without exiting the program.  Constant values can be changed as often as desired.
+present in different hash tables.  It takes in a .txt file and uses the information contained within to build a hash table.  The user can select from 4 hash functions to test.  The user can also choose their desired table size, as well as the multiplication constant for the multiplication hash function.  The table can also be cleared in order to run multiple tests without exiting the program.  Constant values can be changed as often as desired.
 
 #How to Run:
 
@@ -26,8 +26,7 @@ Solo project
 
 #Open issues/bugs:
 
-There is a known bug with table size. The default is set at 1024, prime numbers above this value cause a segmentation fault.  This is primarily with the 1000 word test document, large table sizes are untested 
-with the smaller movie document.
+There is a known bug with table size. The default is set at 1024, some numbers above this value cause a segmentation fault.  This occurs with both test documents.
 Incorrect inputs can also cause unpredictable errors, as the program is not currently set up to check the 
 user's input for accuracy.
 Either one of these would be a great contribution to the project.
