@@ -1,3 +1,11 @@
+//Hayden Reich
+//Final Project
+//TA: Kannan
+/*
+    Additional hash functions found at: 
+    http://www.cs.hmc.edu/~geoff/classes/hmc.cs070.200101/homework10/hashfuncs.html
+*/
+
 #include <iostream>
 #include <string>
 #include <fstream>
