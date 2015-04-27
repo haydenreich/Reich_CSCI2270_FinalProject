@@ -28,6 +28,6 @@ Solo project
 There is a known bug with table size. The default is set at 1024, prime numbers above this value cause a segmentation fault.  This is primarily with the 1000 word test document, large table sizes are untested 
 with the smaller movie document.
 Incorrect inputs can also cause unpredictable errors, as the program is not currently set up to check the 
-users input for accuracy.
+user's input for accuracy.
 Either one of these would be a great contribution to the project.
 
