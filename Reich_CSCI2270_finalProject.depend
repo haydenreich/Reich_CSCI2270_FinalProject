@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1430076202 source:/home/hayden/Documents/CSCI 2270 /Reich_CSCI2270_finalProject/HashTable.cpp
+	<iostream>
+	<string>
+	<vector>
+	<iomanip>
+	<cmath>
+	"HashTable.h"
+
+1430076202 /home/hayden/Documents/CSCI 2270 /Reich_CSCI2270_finalProject/HashTable.h
+	<string>
+	<vector>
+
+1430076202 source:/home/hayden/Documents/CSCI 2270 /Reich_CSCI2270_finalProject/main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<vector>
+	"HashTable.h"
+
