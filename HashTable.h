@@ -19,6 +19,7 @@ class HashTable
         int hashSum(std::string word);
         int hashMult(std::string word);
         int hashKnuth(std::string word);
+        int hashCRC(std::string word);
         void hashStepByStep(std::string word);
         void insertData(std::string word);
         void scoreHashFunction(int n);

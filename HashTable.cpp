@@ -21,7 +21,7 @@ HashTable::~HashTable(){
     //hashTable.erase(0, tableSize-1);
 }
 /*
-This method clears the table by cyclying through the hash table and setting each value 
+This method clears the table by cyclying through the hash table and setting each value
 to NULL.  It also resets the collision counter to 0 so additional tests can be run with accurate output.
 */
 void HashTable::clearTable(){
@@ -83,6 +83,35 @@ int HashTable::hashKnuth(string word){
     return sum;
 }
 /*
+Function Prototype:
+int HashTable::hashCRC(string)
+
+Function Description:
+This function was taken from http://www.cs.hmc.edu/~geoff/classes/hmc.cs070.200101/homework10/hashfuncs.html
+It takes the intended index value of h and does a 5-bit left circular shift.  It then
+XOR's in each integer value from the input word.
+
+Example:
+HashTable ht;
+ht.hashCRC("example");
+
+Precondition:
+User desires to find the hash index for a given string
+Postcondition:
+Chosen string is assigned an index location based on the private variable tableSize
+*/
+int HashTable::hashCRC(string word){
+    unsigned int highOrder;
+    unsigned int h = 0;
+    highOrder = h & 0xf8000000;
+    for(int i=0; i<word.length(); i++){
+        h = h << 5;
+        h = h ^ (highOrder >> 27);
+        h = h ^ (unsigned int)word[i];
+    }
+    return h%tableSize;
+}
+/*
 Function prototype:
 void HashTable::insertData(string)
 
@@ -112,6 +141,8 @@ void HashTable::insertData(string word){
         index = hashMult(word);
     else if(hashSelection == 3)
         index = hashKnuth(word);
+    else if(hashSelection == 4)
+        index = hashCRC(word);
     if(hashTable[index] == NULL)
         hashTable[index] = newData;
     else{

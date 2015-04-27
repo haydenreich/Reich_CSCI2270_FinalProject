@@ -1,11 +1,3 @@
-//Hayden Reich
-//Final Project
-//TA: Kannan
-/*
-    Additional hash functions found at: 
-    http://www.cs.hmc.edu/~geoff/classes/hmc.cs070.200101/homework10/hashfuncs.html
-*/
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -70,6 +62,7 @@ int main(int argc, char *argv[])
             cout<<"1. Division method (hashSum from assignment 9)"<<endl;
             cout<<"2. Multiplication method"<<endl;
             cout<<"3. Knuth Division method"<<endl;
+            cout<<"4. CRC method"<<endl;
             cin>>select_In;
             hashTest->setHashSelection(select_In);
 
