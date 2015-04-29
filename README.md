@@ -10,6 +10,14 @@ Don't forget to build the table before trying to print and score!
 
 This project was built as a Code Blocks console project and can be run from that program on Linux OS or from the command line.  This program takes no adiitional command line arguments. Files needed to build the program are main.cpp, HashTable.h, and HashTable.cpp.  The .txt files are for testing purposes only.  Must include the build
 option: [-std=c++0x].  In Code Blocks: Project>Build Options>Flag appropriate option.
+Steps:
+1. Once program has started, load the text file you wish to test. The program will store each line as a seperate string, so any .txt file formatted appropriately will work.  
+2. You can than choose the table size you wish. Default values are set as table size: 1024, multiplication constant: 13/32.
+3. The user then selects which hash function they would like to use to calculate the indices for the hash table.
+4. The user should then select the option to build the table.
+5. Once the table is built, it can then be printed and scored.
+6. If the user would like to test a different function, they can clear the table, which resets all score counters and resets the table values to NULL.
+7. Be sure to rebuild the table before printing or scoring.
 
 #Dependencies:
 
