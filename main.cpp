@@ -30,6 +30,12 @@ int main(int argc, char *argv[])
     cout<<"8. Load a file to test"<<endl;
     cout<<"9. Quit"<<endl;
     cin>>userInput;
+    if(!cin)
+    {
+        cout<<"That is not a valid input. Please try again."<<endl;
+        cin.clear();
+        userInput = 0;
+    }
     cin.ignore(10000,'\n');
     //loop only calls functions in class definition
     //all void functions, so main does nothing but the user loop
@@ -40,13 +46,29 @@ int main(int argc, char *argv[])
             double a_in;
             cout<<"Please enter your desired table size: "<<endl;
             cin>>size_in;
-            hashTest->setTableSize(size_in);
-            cout<<"Set custom multiplication constant? y/n"<<endl;
-            cin>>yesNo;
-            if(yesNo == 'y'){
-                cout<<"Please enter your constant (0<x<1): "<<endl;
-                cin>>a_in;
-                hashTest->setASize(a_in);
+            if(!cin)
+            {
+                cout<<"That is not a valid input. Please try again."<<endl;
+                cin.clear();
+            }
+            else if(size_in < 1)
+                cout<<"Table size must be greater than 0"<<endl;
+            else
+            {
+                hashTest->setTableSize(size_in);
+                cout<<"Set custom multiplication constant? y/n"<<endl;
+                cin>>yesNo;
+                if(yesNo == 'y'){
+                    cout<<"Please enter your constant (0<x<1): "<<endl;
+                    cin>>a_in;
+                    if(!cin)
+                    {
+                        cout<<"That is not a valid input. Please try again."<<endl;
+                        cin.clear();
+                    }
+                    else
+                        hashTest->setASize(a_in);
+                }
             }
         }
         if(userInput == 2){
@@ -57,7 +79,15 @@ int main(int argc, char *argv[])
             cout<<"3. Knuth Division method"<<endl;
             cout<<"4. CRC method"<<endl;
             cin>>select_In;
-            hashTest->setHashSelection(select_In);
+            if(!cin)
+            {
+                cout<<"That is not a valid input. Please try again."<<endl;
+                cin.clear();
+            }
+            else if(select_In < 5 && select_In > 0)
+                hashTest->setHashSelection(select_In);
+            else
+                cout<<"That is not a valid input. Please try again."<<endl;
 
         }
         if(userInput == 3){
@@ -100,6 +130,12 @@ int main(int argc, char *argv[])
         cout<<"8. Load a file to test"<<endl;
         cout<<"9. Quit"<<endl;
         cin>>userInput;
+        if(!cin)
+        {
+            cout<<"That is not a valid input. Please try again."<<endl;
+            cin.clear();
+            userInput = 0;
+        }
         cin.ignore(10000,'\n');
     }
     cout<<"Goodbye!"<<endl;
