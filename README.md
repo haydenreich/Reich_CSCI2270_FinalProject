@@ -22,7 +22,7 @@ Steps:
 
 #Dependencies:
 
-Reich_CSCI2270_finalProject.cbp, main.cpp, HashTable.h, and HashTable.cpp.  1000word_test.txt and Movie_test.txt files are for testing purposes only.  
+Reich_CSCI2270_finalProject.cbp, main.cpp, HashTable.h, and HashTable.cpp, Utilities.h, Utilities.cpp.  1000word_test.txt and Movie_test.txt files are for testing purposes only.  
 
 #System Requirements:
 
