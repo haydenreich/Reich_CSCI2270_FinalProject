@@ -18,6 +18,7 @@ Steps:
 5. Once the table is built, it can then be printed and scored.
 6. If the user would like to test a different function, they can clear the table, which resets all score counters and resets the table values to NULL.
 7. Be sure to rebuild the table before printing or scoring.
+8. Select the number for quit to exit the program.
 
 #Dependencies:
 
