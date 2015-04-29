@@ -3,30 +3,22 @@
 #include <fstream>
 #include <vector>
 #include "HashTable.h"
+#include "Utilities.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
     HashTable *hashTest = new HashTable;
-    string fileName;
-    cout<<"Enter a file to test: "<<endl;
-    getline(cin, fileName);
+    Utilities *utils = new Utilities;
     vector<string> words;
-    string strLine;
+    string fileName;
+    if(argv[1] != NULL) {
+        fileName = argv[1];
+        utils->readFile(fileName);
+        words = utils->getWords();
+    }
     int userInput;
-    ifstream inFile;
-    inFile.open(fileName);
-    if(inFile.fail()){
-        cout<<"The file did not open successfully"<<endl;
-    }
-    else{
-        while(!inFile.eof()){
-            getline(inFile, strLine);
-            words.push_back(strLine);
-        }
-    }
-    inFile.close();
     cout<<"Welcome to the Hash Function Test"<<endl;
     cout<<"1. Set custom table size"<<endl;
     cout<<"2. Select hash function"<<endl;
@@ -35,12 +27,13 @@ int main(int argc, char *argv[])
     cout<<"5. Score hash function"<<endl;
     cout<<"6. Clear hash table"<<endl;
     cout<<"7. Enter table values manually"<<endl;
-    cout<<"8. Quit"<<endl;
+    cout<<"8. Load a file to test"<<endl;
+    cout<<"9. Quit"<<endl;
     cin>>userInput;
     cin.ignore(10000,'\n');
     //loop only calls functions in class definition
     //all void functions, so main does nothing but the user loop
-    while(userInput != 8){
+    while(userInput != 9){
         if(userInput == 1){
             int size_in;
             char yesNo;
@@ -86,6 +79,15 @@ int main(int argc, char *argv[])
             cout<<"Enter a word to add: "<<endl;
             getline(cin, word);
             hashTest->insertData(word);
+            words.push_back(word);
+        }
+        if(userInput == 8){
+            cout<<"Please enter a file name:"<<endl;
+            getline(cin, fileName);
+            utils->clearWords();
+            utils->readFile(fileName);
+            words.clear();
+            words = utils->getWords();
         }
         cout<<"-------Main Menu-------"<<endl;
         cout<<"1. Set custom table size"<<endl;
@@ -95,7 +97,8 @@ int main(int argc, char *argv[])
         cout<<"5. Score hash function"<<endl;
         cout<<"6. Clear hash table"<<endl;
         cout<<"7. Enter table values manually"<<endl;
-        cout<<"8. Quit"<<endl;
+        cout<<"8. Load a file to test"<<endl;
+        cout<<"9. Quit"<<endl;
         cin>>userInput;
         cin.ignore(10000,'\n');
     }

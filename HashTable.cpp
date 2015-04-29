@@ -14,6 +14,7 @@ HashTable::HashTable(){
         hashTable.push_back(NULL);
     }
     a = 13.0/32.0;
+    hashSelection = 1;
     collisionCounter = 0;
 }
 
