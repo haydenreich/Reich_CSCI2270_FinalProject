@@ -46,7 +46,9 @@ Solo project
 #Open issues/bugs:
 
 There is a known bug with table size. The default is set at 1024, some numbers above this value cause a segmentation fault.  This occurs with both test documents.
-Incorrect inputs can also cause unpredictable errors, as the program is not currently set up to check the 
-user's input for accuracy.
+
+Fixed, thanks to ridy0663 - Incorrect inputs can also cause unpredictable errors, as the program is not currently set up to check the user's input for accuracy. - Fixed
+
 Either one of these would be a great contribution to the project.
 
+ 
